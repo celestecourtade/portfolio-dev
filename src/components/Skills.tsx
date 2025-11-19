@@ -1,5 +1,5 @@
 export default function Skills() {
-  const skills = ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Tailwind", "UX/UI", "Git", "Figma" , "Astro"];
+  const skills = ["HTML5", "CSS3", "JavaScript", "TypeScript", "React.js", "Tailwind", "UX/UI", "Git", "Figma" , "Astro", "Nest.js", "Prisma ORM", "Docker", "PostgreSQL", "GitHub"];
 
   return (
     <section id="skills" className="py-24 text-center">
