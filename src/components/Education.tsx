@@ -1,32 +1,32 @@
 export default function Education() {
   const studies = [
     {
-      year: "2023",
-      title: "Desarrollo Web",
-      institute: "Coderhouse",
-      description: "HTML, CSS, Grid, Flexbox, Responsive, Hosting",
+      year: "2025",
+      title: "Licenciatura en Informatica",
+      institute: "Universidad Nacional del Oeste",
+      description: "Cursando actualmente primer año.",
       certificateLink: "#",
+    },
+    {
+      year: "2025",
+      title: "Desarrolladora Fullstack",
+      institute: "Fundación integrar",
+      description: "Programa IntegrarTec",
+      certificateLink: "https://www.linkedin.com/in/celeste-courtade-417763304/recent-activity/all/",
     },
     {
       year: "2024",
       title: "Diseño UX/UI",
-      institute: "Agencia de Habilidades (Programa Codo a Codo)",
-      description: "Aprendizaje de diseño centrado en el usuario y prototipado",
-      certificateLink: "#",
+      institute: "Agencia de habilidades para el futuro",
+      description: "Programa Codo a Codo",
+      certificateLink: "https://www.linkedin.com/in/celeste-courtade-417763304/overlay/1743635450336/single-media-viewer/?profileId=ACoAAE210JMBqBGgxWMx7r1ZEHj3TCHPdVuwAA8",
     },
     {
-      year: "2025",
-      title: "Licenciatura en Informática",
-      institute: "Universidad X",
-      description: "Primer año cursando la licenciatura en informática, fundamentos de programación y matemáticas",
-      certificateLink: "#",
-    },
-    {
-      year: "2025",
-      title: "Programación Fullstack",
-      institute: "Fundación Integrar (Programa Integrar Tec)",
-      description: "Desarrollo de aplicaciones web fullstack con React, Node.js y bases de datos",
-      certificateLink: "#",
+      year: "2023",
+      title: "Desarrolladora web",
+      institute: "Coderhouse",
+      description: "Contenidos: HTML, CSS, Wireframing, Hosting, SASS.",
+      certificateLink: "https://www.linkedin.com/in/celeste-courtade-417763304/details/certifications/1744414948931/single-media-viewer/?profileId=ACoAAE210JMBqBGgxWMx7r1ZEHj3TCHPdVuwAA8",
     },
   ];
 

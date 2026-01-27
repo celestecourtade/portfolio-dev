@@ -133,7 +133,7 @@ const Header = () => {
               <FaLinkedin />
             </a>
             <a
-              href="https://github.com/tu-usuario"
+              href="https://github.com/celestecourtade"
               target="_blank"
               rel="noopener noreferrer"
               className="text-violet-300 hover:text-violet-400 text-xl"

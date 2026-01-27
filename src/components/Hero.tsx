@@ -12,7 +12,7 @@ export default function Hero() {
         Celeste Courtade
       </h1>
       <p className="mt-4 text-xl text-purple-200 relative z-10">
-        Desarrolladora Fullstack | React.js | TypeScript | NestJS | PostgreSQL | UX/UI Designer
+        Desarrolladora Frontend | React.js | TypeScript | UX/UI Designer
       </p>
       <a
         href="#projects"
