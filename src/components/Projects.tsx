@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-
 interface Project {
   title: string;
   description: string;
@@ -37,34 +36,6 @@ const frontendProjects: Project[] = [
   },
 ];
 
-
-/* 
-const backendProjects: Project[] = [
-  {
-    title: "Sistema de Reservas para Centro de Estética",
-    description:
-      "Gestión de turnos, servicios y horarios para un centro de estética.",
-    image: "https://via.placeholder.com/300x200",
-    link: "#",
-    tech: "REACT.JS | VITE | TYPESCRIPT | TAILWINDCSS | NESTJS | POSTGRESQL | DOCKER | GIT | GITHUB",
-  },
-  {
-    title: "Sistema de Inventario para Tienda de Ropa “UrbanStyle”",
-    description:
-      "Control de productos, categorías y stock para una tienda de ropa.",
-    image: "https://via.placeholder.com/300x200",
-    link: "#",
-    tech: "REACT.JS | VITE | TYPESCRIPT | TAILWINDCSS | NESTJS | POSTGRESQL | DOCKER | GIT | GITHUB",
-  },
-  {
-    title: "Sistema de Usuarios y Autenticación para Academia Online “EduTech”",
-    description: "Registro, login y roles para plataforma educativa.",
-    image: "https://via.placeholder.com/300x200",
-    link: "#",
-    tech: "REACT.JS | VITE | TYPESCRIPT | TAILWINDCSS | NESTJS | POSTGRESQL | DOCKER | GIT | GITHUB",
-  },
-];
-*/
 const uxProjects: Project[] = [
   {
     title: "Patitas Perdidas",
@@ -79,9 +50,7 @@ const uxProjects: Project[] = [
 ======================= */
 
 export default function Projects() {
-  const [category, setCategory] = useState<
-    "frontend" | "backend" | "ux"
-  >("frontend");
+  const [category, setCategory] = useState<"frontend" | "ux">("frontend");
 
   return (
     <section
@@ -94,10 +63,10 @@ export default function Projects() {
 
       {/* CATEGORÍAS */}
       <div className="flex justify-center gap-6 mb-12 flex-wrap">
-        {["frontend", "backend", "ux"].map((cat) => (
+        {["frontend", "ux"].map((cat) => (
           <button
             key={cat}
-            onClick={() => setCategory(cat as any)}
+            onClick={() => setCategory(cat as "frontend" | "ux")}
             className={`px-6 py-2 rounded-xl font-semibold transition
               ${
                 category === cat
@@ -105,11 +74,7 @@ export default function Projects() {
                   : "bg-black/40 text-fuchsia-300 border border-fuchsia-500 hover:shadow-[0_0_15px_#ff00ff]"
               }`}
           >
-            {cat === "frontend"
-              ? "Frontend"
-              : cat === "backend"
-              ? "Backend"
-              : "UX/UI"}
+            {cat === "frontend" ? "Frontend" : "UX/UI"}
           </button>
         ))}
       </div>
@@ -126,22 +91,6 @@ export default function Projects() {
           <ActionButton />
         </>
       )}
-
-    
-      {/* BACKEND 
-      {category === "backend" && (
-        <>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto px-4">
-            {backendProjects.map((project, index) => (
-              <ProjectCard key={index} project={project} />
-            ))}
-          </div>
-
-          <ActionButton />
-        </>
-      )}
-*/}
-    
 
       {/* UX/UI */}
       {category === "ux" && (
