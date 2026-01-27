@@ -37,6 +37,8 @@ const frontendProjects: Project[] = [
   },
 ];
 
+
+/* 
 const backendProjects: Project[] = [
   {
     title: "Sistema de Reservas para Centro de Estética",
@@ -62,7 +64,7 @@ const backendProjects: Project[] = [
     tech: "REACT.JS | VITE | TYPESCRIPT | TAILWINDCSS | NESTJS | POSTGRESQL | DOCKER | GIT | GITHUB",
   },
 ];
-
+*/
 const uxProjects: Project[] = [
   {
     title: "Patitas Perdidas",
@@ -125,7 +127,8 @@ export default function Projects() {
         </>
       )}
 
-      {/* BACKEND */}
+    
+      {/* BACKEND 
       {category === "backend" && (
         <>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto px-4">
@@ -137,6 +140,8 @@ export default function Projects() {
           <ActionButton />
         </>
       )}
+*/}
+    
 
       {/* UX/UI */}
       {category === "ux" && (
