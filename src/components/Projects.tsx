@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"; // <-- Importar useNavigate
 
 interface Project {
   title: string;
@@ -12,7 +13,7 @@ interface Project {
    DATA
 ======================= */
 
-const frontendProjects: Project[] = [
+export const frontendProjects: Project[] = [
   {
     title: "Tienda Tech",
     description: "Tienda de tecnología",
@@ -28,20 +29,21 @@ const frontendProjects: Project[] = [
     tech: "HTML5 | CSS3 | JAVASCRIPT | ASTRO | GIT | GITHUB",
   },
   {
-    title: "CRM ClientManager",
-    description: "Sistema de gestión de clientes",
-    image: "https://via.placeholder.com/300x200",
-    link: "#",
-    tech: "REACT.JS | VITE | TYPESCRIPT | TAILWINDCSS | FETCH API | GIT | GITHUB",
+    title: "Basilico Ice Cream ",
+    description: "Sitio web responsivo de heladería con HTML, CSS y JavaScript",
+    image: "img/project-4.png",
+    link: "https://basilicocream.netlify.app/",
+    tech: "HTML | CSS | JAVASCRIPT | LIBRERIA SWIPPER",
   },
 ];
 
-const uxProjects: Project[] = [
+export const uxProjects: Project[] = [
   {
     title: "Patitas Perdidas",
-    description: "Diseño UX/UI de app para buscar mascotas",
-    image: "https://via.placeholder.com/300x200",
-    link: "#",
+    description: "Diseño UX/UI de app para buscar mascotas perdidas, utilizando FIGMA. ¡Mira el prototipo final!",
+    image: "img/project-uxui.png",
+    tech: "Diseño de experiencia de usuario y prototpo de alta fidelidad con figma.",
+    link: "https://www.figma.com/proto/5Y6oj2eadx6v1djjfXXFSR/Proyecto-Patitas-Perdidas?node-id=786-13840&p=f&t=iPdXxvN2pIG9mJzI-1&scaling=min-zoom&content-scaling=fixed&page-id=786%3A6521",
   },
 ];
 
@@ -126,9 +128,7 @@ function ProjectCard({ project }: { project: Project }) {
           {project.title}
         </h3>
 
-        <p className="text-purple-200 text-sm mb-2">
-          {project.description}
-        </p>
+        <p className="text-purple-200 text-sm mb-2">{project.description}</p>
 
         {project.tech && (
           <p className="text-fuchsia-400 font-semibold text-xs mb-4 border-l-4 border-fuchsia-500 pl-2">
@@ -154,9 +154,14 @@ function ProjectCard({ project }: { project: Project }) {
 ======================= */
 
 function ActionButton() {
+  const navigate = useNavigate(); // <-- Hook para navegar
+
   return (
     <div className="mt-12">
-      <button className="px-8 py-3 rounded-2xl font-semibold border border-fuchsia-500 text-fuchsia-300 hover:bg-fuchsia-500 hover:text-black transition shadow-[0_0_20px_#ff00ff]">
+      <button
+        onClick={() => navigate("/projects")} // <-- Navega a la nueva página
+        className="px-8 py-3 rounded-2xl font-semibold border border-fuchsia-500 text-fuchsia-300 hover:bg-fuchsia-500 hover:text-black transition shadow-[0_0_20px_#ff00ff]"
+      >
         Ver todos los proyectos
       </button>
     </div>
