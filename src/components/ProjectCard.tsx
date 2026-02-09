@@ -1,6 +1,3 @@
-// src/components/ProjectCard.tsx
-import React from "react";
-
 interface Project {
   title: string;
   description: string;
