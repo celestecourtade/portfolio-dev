@@ -6,7 +6,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
-import AllProjects from "./pages/AllProjects";
+import MedicalAppointment from "./pages/MedicalAppointment";
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -34,14 +34,16 @@ export default function App() {
         }
       />
 
-      <Route
-        path="/projects"
+       {/* PROYECTO DETALLE - SISTEMA DE CITAS */}
+       <Route
+        path="/projects/medical-appointment"
         element={
           <Layout>
-            <AllProjects /> {/* Aquí mostrarás todos los proyectos */}
+            <MedicalAppointment />
           </Layout>
         }
       />
+
     </Routes>
   );
 }
